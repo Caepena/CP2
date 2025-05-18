@@ -30,19 +30,19 @@ CP2/
 
 ### 🚗 MotoController
 
-- `GET /api/moto` – Listar todas as motos
-- `GET /api/moto/{id}` – Buscar moto por ID
-- `POST /api/moto` – Cadastrar nova moto
-- `PUT /api/moto/{id}` – Atualizar moto
-- `DELETE /api/moto/{id}` – Remover moto
+- `GET /moto` – Listar todas as motos
+- `GET /moto/{id}` – Buscar moto por ID
+- `POST /moto` – Cadastrar nova moto
+- `PUT /moto/{id}` – Atualizar moto
+- `DELETE /moto/{id}` – Remover moto
 
 ### 🏢 GaragemController
 
-- `GET /api/garagem` – Listar todas as garagens
-- `GET /api/garagem/{id}` – Buscar garagem por ID
-- `POST /api/garagem` – Cadastrar nova garagem
-- `PUT /api/garagem/{id}` – Atualizar garagem
-- `DELETE /api/garagem/{id}` – Remover garagem
+- `GET /garagem` – Listar todas as garagens
+- `GET /garagem/{id}` – Buscar garagem por ID
+- `POST /garagem` – Cadastrar nova garagem
+- `PUT /garagem/{id}` – Atualizar garagem
+- `DELETE /garagem/{id}` – Remover garagem
 
 ---
 
