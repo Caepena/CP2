@@ -1,77 +1,105 @@
-
 # CP2 - Sistema de Gestão de Motos e Garagens
 
-Este é um projeto em .NET 8 que implementa um sistema de gerenciamento de motos e garagens utilizando Entity Framework Core, arquitetura em camadas e banco de dados relacional.
+Este é um projeto em .NET 8 que implementa uma API RESTful para gerenciamento de motos e garagens. Utiliza Entity Framework Core com banco Oracle, estruturado em camadas e baseado em boas práticas de desenvolvimento orientado a objetos.
+
+---
 
 ## 📁 Estrutura do Projeto
 
 ```
 CP2/
-├── CP2/
-│   ├── Controllers/              # Lida com requisições HTTP
-│   │   ├── MotoController.cs
-│   │   └── GaragemController.cs
-│   ├── Domain/
-│   │   ├── Entity/              # Entidades do domínio (Moto, Garagem)
-│   │   └── Enums/               # Enumeração de StatusMoto
-│   ├── Infrastructure/
-│   │   ├── Context/             # DbContext (MottuContext)
-│   │   ├── Mappings/            # Mapeamentos Entity Framework
-│   │   └── Persistence/Repositories/ # Interface e implementação genérica de repositório
-│   ├── Migrations/              # Migrações geradas pelo EF Core
-│   ├── appsettings.json         # Configurações da aplicação
-│   ├── Program.cs               # Ponto de entrada da aplicação
-│   └── CP2.csproj               # Arquivo de projeto .NET
+├── Controllers/                      # Controladores HTTP
+│   ├── MotoController.cs
+│   └── GaragemController.cs
+├── Domain/
+│   ├── Entity/                      # Entidades: Moto, Garagem
+│   └── Enums/                       # Enumeração de status da moto
+├── Infrastructure/
+│   ├── Context/                     # DbContext (MottuContext)
+│   ├── Mappings/                    # Mapeamento EF
+│   └── Persistence/Repositories/    # Repositórios e interfaces
+├── Migrations/                      # Migrações EF Core
+├── appsettings.json                 # Configurações da aplicação
+├── Program.cs                       # Entry point da aplicação
+└── CP2.csproj                       # Projeto .NET
 ```
+
+---
+
+## 📡 Rotas Disponíveis
+
+### 🚗 MotoController
+
+- `GET /api/moto` – Listar todas as motos
+- `GET /api/moto/{id}` – Buscar moto por ID
+- `POST /api/moto` – Cadastrar nova moto
+- `PUT /api/moto/{id}` – Atualizar moto
+- `DELETE /api/moto/{id}` – Remover moto
+
+### 🏢 GaragemController
+
+- `GET /api/garagem` – Listar todas as garagens
+- `GET /api/garagem/{id}` – Buscar garagem por ID
+- `POST /api/garagem` – Cadastrar nova garagem
+- `PUT /api/garagem/{id}` – Atualizar garagem
+- `DELETE /api/garagem/{id}` – Remover garagem
+
+---
 
 ## 🧰 Tecnologias Utilizadas
 
-- [.NET 8](https://dotnet.microsoft.com/en-us/download)
+- .NET 8
 - ASP.NET Core
 - Entity Framework Core
-- SQLite ou outro provedor relacional
+- Oracle Database
 - RESTful API
 
-## 🚀 Como executar o projeto
+---
+
+## 🚀 Como Executar o Projeto
 
 1. **Clone o repositório:**
-
    ```bash
-   git clone <link-do-repositório>
+   git clone <link-do-repositorio>
    cd CP2/CP2
    ```
 
 2. **Restaure os pacotes e compile:**
-
    ```bash
    dotnet restore
    dotnet build
    ```
 
-3. **Aplique as migrações no banco de dados:**
+3. **Atualize a string de conexão com o Oracle** no arquivo `appsettings.json`.
 
-   ```bash
-   dotnet ef database update
-   ```
-
-4. **Execute a aplicação:**
-
+4. **Rode a aplicação:**
    ```bash
    dotnet run
    ```
 
-5. Acesse via navegador ou ferramentas como Postman: `https://localhost:5001/swagger` (caso Swagger esteja configurado).
+5. **Acesse via navegador ou Postman:**
+   ```
+   https://localhost:5001/swagger
+   ```
+
+---
 
 ## 📌 Funcionalidades
 
-- Cadastro e listagem de garagens
-- Cadastro, listagem e controle de status das motos
-- Relacionamento entre motos e garagens
-- Persistência em banco de dados com EF Core
+- ✅ Cadastro e listagem de garagens
+- ✅ Cadastro e controle de motos
+- ✅ Associação entre motos e garagens
+- ✅ Persistência em banco relacional com EF Core
 
-## 📄 Licença
+---
 
-Este projeto é acadêmico e pode ser utilizado como base para estudos.
+## 👥 Integrantes
+
+- Caetano Penafiel Matos – RM557984  
+- Kauã Fermino Zipf – RM558957  
+- Victor Egídio Lira – RM556653  
+
+---
 
 
 ## 🔍 Observações
